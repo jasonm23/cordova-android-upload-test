@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>File Upload Test</title>
+        <style>
+          body {
+          color: white;
+          background-color: black;
+          padding: 10px;
+          }
+          img {
+          border: 4px solid white;
+          }
+          input {
+          display: block;
+          width: 100%;
+          border:none;
+          padding:5px;
+          font-size: 12pt;
+          }
+          select {
+          display: block;
+          }
+          button {
+          display: block;
+          }
+          textarea {
+          width:100%;
+          background-color: #333;
+          color:white;
+          border:none;
+          }
+        </style>
+        
+    </head>
+    <body>
+        <div class="app">
+            <h1>File Upload Test</h1>
+            <button onclick="takePhoto();">Take picture</button>
+            <div>
+              <img id="photo_preview"/>
+            </div>
+            <input id="upload_url" type="text" placeholder="Upload url" value="http://posttestserver.com/post.php?dir=cordova_upload"/>
+            <input id="parameter_name" type="text" placeholder="parameter/key name" value="photo"/>
+            <select id="upload_method">
+              <option>POST</option>
+              <option>PUT</option>
+            </select>
+            <button onclick="uploadPhoto();">Upload picture</button>
+            <textarea rows="10" id="response_box" placeholder="Response message" readonly></textarea>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
